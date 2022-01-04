@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -7,34 +8,47 @@
   <link href="style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/ckh0wkv.css">
   <script src="script.js"></script>
-  <title>Kal Pandit</title>
 </head>
 <body onload="document.body.style.opacity='1'">
-<div class="flex">
-    <div class="m-auto flex content-center">
-      <div>
-        <img draggable="false" alt="Kal's head cropped in a circle." class="face bottom-12 top-0 right-0 left-0 absolute m-auto " src="head4.png">
-      </div>
-      <div>
-        <img draggable="false" alt="The text 'Kal Pandit' rotates." class="slowspin bottom-12 top-0 right-0 left-0 absolute m-auto" src="ktext.png">
-      </div>
-      <div class="grid grid-cols-1 p-75 content-center items-center gap-6">
-        <div class="m-auto flex content-center">
-          <div class="questa grid grid-cols-2 gap-6">
-            <div>
-              <button class="shadow h-12 w-28 m-auto text-xl border-2 border-blue-400 hover:border-blue-100 text-white font-medium py-2 px-4 rounded">
-                <a class="text-center" href="mailto:kal.pa@icloud.com">Email</a>
-              </button> 
-            </div>
-            <div>
-              <button class="shadow h-12 w-28 m-auto text-xl border-2 border-green-400 hover:border-green-100 text-white font-medium py-2 px-4 rounded">
-                <a class="text-center" href="https://github.com/kalpandit">GitHub</a>
-              </button> 
-            </div>
-          </div> 
-        </div>
-      </div>
+  <div id="hero" class="fixed w-screen h-screen z-0 "></div>
+
+<div class="z-10 flex items-center h-screen justify-center hero pb-10">
+  <div class="grid z-10 lg:grid-cols-2 sm:grid-cols-1 gap-10 md:grid-cols-1 w-full m-auto px-2">
+    <div class="md:m-auto lg:items-start text-center flex grid grid-cols-1 gap-5 md:gap-5">
+      <h1 class="tk-questa-sans text-4xl max-w-3xl lg:text-7xl font-medium text-white lg:text-left text-center">Hi! I'm Kal.</h1>
+    <h2 class="lg:text-left text-center tk-questa-sans font-light text-xl text-white max-w-md mx-auto lg:mx-0">I'm a freshman at Rutgers-New Brunswick studying computer science.</h2>
+    <div class="mx-auto lg:mx-0 grid grid-cols-2 gap-6 w-64 md:pb-6">
+      <button class="shadow h-12 tk-questa-sans w-28 text-xl border-2 border-blue-400 hover:border-blue-100 text-white font-medium py-2 px-4 rounded">
+        <a class="text-center" href="mailto:kal.pandit@rutgers.edu">Email</a>
+      </button> 
+      <button class="shadow h-12 tk-questa-sans  w-28 text-xl border-2 border-green-400 hover:border-green-100 text-white font-medium py-2 px-4 rounded">
+        <a class="text-center" href="https://github.com/kalpandit">GitHub</a>
+      </button> 
     </div>
+  </div>
+  <div class="order-first lg:order-last">
+    <img draggable="false" src="anim.svg" class="m-auto relative pt-10 slowspin">
+  </div>
 </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+<script>
+VANTA.FOG({
+  el: "#hero",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  highlightColor: 0x2f0000,
+  midtoneColor: 0x30352,
+  lowlightColor: 0xbb0404,
+  baseColor: 0x0,
+  blurFactor: 0.50,
+  speed: 1.80,
+  zoom: 1.20
+})
+</script>
 </body>
 </html>
